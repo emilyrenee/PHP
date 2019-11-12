@@ -1,0 +1,12 @@
+<?php
+
+require("./constants.php");
+
+$array = get_defined_constants(true)['user'];
+$result = $array['NUMBER_PETS'] * $array['YEARS_EXPERIENCE'];
+
+print_r("The result of " . $array['NUMBER_PETS'] . " * " . $array['YEARS_EXPERIENCE'] . " is " . $result . PHP_EOL);
+
+$long_text = "Lorem ipsum {$array['NUMBER_CHILDREN']} dolor sit amet, {$array['NUMBER_PETS']} consectetur adipiscing elit. Donec est urna, mollis quis tortor et, tincidunt sagittis nisl. Fusce sit amet tempor felis, eget gravida lectus. Ut sed neque mauris. Phasellus vitae urna ut justo vestibulum rhoncus non quis sapien. Nullam fringilla, eros quis auctor aliquam, lectus tellus tempor velit, vel ultricies nisl nisl non nisl. Fusce ut ornare mauris, non sodales purus. Morbi ac mauris magna. In fermentum augue vitae lacus blandit volutpat. Fusce congue, tellus tincidunt fermentum vulputate, orci urna eleifend erat, vitae gravida neque purus ac enim. Vestibulum tempor tortor at lorem venenatis venenatis. Sed eget metus aliquet, consectetur lectus et, varius arcu. Sed pulvinar felis augue, id egestas lacus luctus ut. Morbi nec sapien nec lorem posuere aliquam at id ipsum. Etiam gravida finibus nisi. PHP_EOL Sed quis pulvinar sapien. Integer vitae nibh vel diam tempus scelerisque ut vel enim. Donec {$array['MY_PETS']} sit amet mauris {$array['YEARS_EXPERIENCE']} ut velit efficitur pellentesque. Praesent ut porttitor leo. Nam facilisis, nulla rutrum bibendum porta, eros lorem vehicula est, ac mollis ex leo sed lacus. Ut non aliquet metus. Etiam a blandit risus. PHP_EOL Mauris lorem augue, mattis a urna quis, pellentesque venenatis risus. Aenean sollicitudin, tortor in porttitor {$array['JOB']} vulputate, ligula neque lobortis magna, vel mattis eros est consectetur nulla. Pellentesque ut diam erat. Duis vitae nunc mi. Nam viverra, risus sit amet pharetra mattis, ante massa fermentum leo, nec congue est lorem ut lacus. Praesent sed pharetra velit, quis volutpat magna. Vestibulum imperdiet tellus non sapien tincidunt dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam auctor nulla vitae aliquet egestas. Sed dapibus, justo non fermentum gravida, justo ligula maximus dolor, quis hendrerit nibh lacus non tellus. Curabitur sodales euismod suscipit. Vestibulum mauris ligula, ullamcorper at mauris ut, placerat congue sapien. Morbi id est id dolor bibendum faucibus et ac doloi {$array['MY_NAME']}.";
+
+print_r($long_text);
