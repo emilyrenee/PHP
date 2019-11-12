@@ -1,5 +1,5 @@
-define("myName", "Emily");
-define("numberChildren", 2);
-define("numberPets", 2);
-define("job", "Software Engineer");
-define("yearsExperience", 3);
+define("MY_NAME", "Emily");
+define("MY_PETS", 2);
+define("NUMBER_PETS", 2);
+define("JOB", "Software Engineer");
+define("YEARS_EXPERIENCE", 3);
