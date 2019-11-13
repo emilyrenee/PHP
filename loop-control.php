@@ -10,15 +10,45 @@ while($count <= 100) {
 	$count++;
 }
 
+function printText($text, $repetition) {
+	while ($repetition > 0) {
+		print_r($text . PHP_EOL);
+		$repetition--;
+	}
+}
+
 foreach($numbers as $number) {
+	$repetition = 1;
+
+	if ($number == 3) {
+		$text = "Three";
+		printText($text, $repetition);
+	}
+
+	if ($number == 9) {
+		$text = "Nine";
+		$repetition = 3;
+		printText($text, $repetition);
+	}
+
+	if ($number == 15) {
+		$text = "Fifteen";
+		$repetition = 5;
+		printText($text, $repetition);
+	}
+
 	if ($number % 7 == 0) {
 		$numberFactorials = $number / 7;
-		print_r("Sevens are lucky, this number has " . $numberFactorials . "," . PHP_EOL);
-		print_r('First number' . PHP_EOL);
+		$text = "Sevens are lucky, this number has " . $numberFactorials . ",";
+		printText($text, $repetition);
+		$text = 'First number';
+		printText($text, $repetition);
 	}
 	
 	if ($number % 10 == 0) {
-		print_r($number . " is a round number" . PHP_EOL);
-		print_r('Last number' . PHP_EOL);
+		$text = $number . " is a round number";
+		printText($text, $repetition);
+		$text = 'Last number';
+		printText($text, $repetition);
 	}
 };
