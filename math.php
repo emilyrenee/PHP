@@ -10,9 +10,13 @@ class Math
         }
         $args = func_get_args();
 
-        $result = array_reduce($args, function ($a, $b) {
-            return $a + $b;
-        });
+        $result = 0;
+
+        foreach ($args as $arg) {
+            $index = array_search($arg, $args);
+            $result += $args[$index];
+        }
+
         return $result;
     }
 
@@ -24,13 +28,16 @@ class Math
         }
         $args = func_get_args();
 
-        $result = array_reduce($args, function ($a, $b) {
-            return $a - $b;
-        });
+        $result = 0;
+
+        foreach ($args as $arg) {
+            $index = array_search($arg, $args);
+            $result -= $args[$index];
+        }
+
         return $result;
     }
 
-    // passing by reference
     public function multiply()
     {
         $numberArgs = func_num_args();
@@ -39,13 +46,25 @@ class Math
         }
         $args = func_get_args();
 
-        $result = array_reduce($args, function ($a, $b) {
-            return $a * $b;
-        });
+        foreach ($args as $arg) {
+            $index = array_search($arg, $args);
+            
+            if ($index == 0) {
+                $result = $args[$index];
+                var_dump($result);
+            }
+            elseif ($index < (count($args) - 1)) {
+                $result *= $args[$index];
+                var_dump($result);
+            } else {
+                $result *= $args[$index];
+                var_dump($result);
+            }
+        }
+
         return $result;
     }
 
-    // passing by reference
     public function divide()
     {
         $numberArgs = func_num_args();
