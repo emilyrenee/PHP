@@ -10,13 +10,15 @@ class Math
         }
         $args = func_get_args();
 
-        $result = 0;
-
         foreach ($args as $arg) {
             $index = array_search($arg, $args);
-            $result += $args[$index];
+            
+            if ($index == 0) {
+                $result = $args[$index];
+            } else {
+                $result += $args[$index];
+            }
         }
-
         return $result;
     }
 
@@ -28,13 +30,15 @@ class Math
         }
         $args = func_get_args();
 
-        $result = 0;
-
         foreach ($args as $arg) {
             $index = array_search($arg, $args);
-            $result -= $args[$index];
-        }
 
+            if ($index == 0) {
+                $result = $args[$index];
+            } else {
+                $result -= $args[$index];
+            }
+        }
         return $result;
     }
 
@@ -48,17 +52,11 @@ class Math
 
         foreach ($args as $arg) {
             $index = array_search($arg, $args);
-            
+
             if ($index == 0) {
                 $result = $args[$index];
-                var_dump($result);
-            }
-            elseif ($index < (count($args) - 1)) {
-                $result *= $args[$index];
-                var_dump($result);
             } else {
                 $result *= $args[$index];
-                var_dump($result);
             }
         }
 
@@ -73,9 +71,15 @@ class Math
         }
         $args = func_get_args();
 
-        $result = array_reduce($args, function ($a, $b) {
-            return $a / $b;
-        });
+        foreach ($args as $arg) {
+            $index = array_search($arg, $args);
+
+            if ($index == 0) {
+                $result = $args[$index];
+            } else {
+                $result /= $args[$index];
+            }
+        }
         return $result;
     }
 }
