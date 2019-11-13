@@ -21,9 +21,6 @@ function printText($text, $repetition) {
 }
 
 foreach($numbers as $number) {
-	$text = "";
-	$repetition = 1;
-
 	if ($number == 3) {
 		$text = "Three";
 		$repetition = 1;
