@@ -1,17 +1,27 @@
 <?php
 
-function add($foo, $bar) {
-    return $foo + $bar;
+function add($baz, $buzz) {
+    return $baz + $buzz;
 }
 
-function subtract($foo, $bar) {
-    return $foo - $bar;
+function subtract($baz, $buzz) {
+    return $baz - $buzz;
 }
 
-function multiply($foo, $bar) {
-    return $foo * $bar;
+// passing by reference
+function multiply(&$baz, &$buzz) {
+    return $baz * $buzz;
 }
 
-function divide($foo, $bar) {
-    return $foo / $bar;
+// passing by reference
+function divide(&$baz, &$buzz) {
+    return $baz / $buzz;
 }
+
+$foo = 1;
+$bar = 2;
+
+print_r(add($foo, $bar) . PHP_EOL);
+print_r(subtract($foo, $bar) . PHP_EOL);
+print_r(multiply($foo, $bar) . PHP_EOL);
+print_r(divide($foo, $bar) . PHP_EOL);
