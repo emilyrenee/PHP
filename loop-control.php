@@ -71,8 +71,8 @@ while ($iteration < count($numbers)) {
 	$iteration++;
 }
 
-// $iteration = 0;
-// do {
-// 	handleNumber($numbers[$iteration]);
-// 	$iteration++;
-// } while ($iteration < count($numbers));
+$iteration = 0;
+do {
+	handleNumber($numbers[$iteration]);
+	$iteration++;
+} while ($iteration < count($numbers));
