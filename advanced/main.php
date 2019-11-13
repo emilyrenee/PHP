@@ -1,4 +1,5 @@
 <?php
+namespace Advanced;
 
 require('./Mac.php');
 require('./PC.php');

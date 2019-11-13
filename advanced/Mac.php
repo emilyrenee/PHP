@@ -1,7 +1,11 @@
 <?php
-require_once("./Workstation.php");
+namespace Advanced;
 
-class Mac extends Workstation {
+require('./Workstation.php');
+
+use Advanced\Workstation as Station;
+
+class Mac extends Station {
     protected function getMacWorkstationName() {
         return Workstation::getWorkstationName();
     }

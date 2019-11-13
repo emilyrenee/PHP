@@ -1,5 +1,5 @@
 <?php
-
+namespace Advanced;
 class Computer {
     public $public_computer = 'public computer' . PHP_EOL;
 

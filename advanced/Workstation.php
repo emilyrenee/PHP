@@ -1,4 +1,5 @@
-<?php
+<?php 
+namespace Advanced;
 require("./Computer.php");
 
 class Workstation extends Computer {
