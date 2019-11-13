@@ -2,33 +2,33 @@
 
 function add($baz, $buzz)
 {
-    print_r($baz + $buzz . PHP_EOL);
+    return $baz + $buzz;
 }
 
 function subtract($baz, $buzz)
 {
-    print_r($baz - $buzz . PHP_EOL);
+    return $baz - $buzz;
 }
 
 // passing by reference
 function multiply(&$baz, &$buzz)
 {
-    print_r($baz * $buzz . PHP_EOL);
+    return $baz * $buzz;
 }
 
 // passing by reference
 function divide(&$baz, &$buzz)
 {
-    print_r($baz / $buzz . PHP_EOL);
+    return $baz / $buzz;
 }
 
 $foo = 1;
 $bar = 2;
 
-add($foo, $bar);
-subtract($foo, $bar);
-multiply($foo, $bar);
-divide($foo, $bar);
+print_r(add($foo, $bar) . PHP_EOL);
+print_r(subtract($foo, $bar) . PHP_EOL);
+print_r(multiply($foo, $bar) . PHP_EOL);
+print_r(divide($foo, $bar) . PHP_EOL);
 
 
 function compare($baz, $buzz, $qux = false)
