@@ -34,43 +34,39 @@ class Math
         return $result;
     }
 
-    public function add()
+    public function add(...$args)
     {
         $numberArgs = func_num_args();
         if ($numberArgs < 2) {
             return null;
         }
-        $args = func_get_args();
         return $this->doOperation(self::ADD, $args);
     }
 
-    public function subtract()
+    public function subtract(...$args)
     {
         $numberArgs = func_num_args();
         if ($numberArgs < 2) {
             return null;
         }
-        $args = func_get_args();
         return $this->doOperation(self::SUBTRACT, $args);
     }
 
-    public function multiply()
+    public function multiply(...$args)
     {
         $numberArgs = func_num_args();
         if ($numberArgs < 2) {
             return null;
         }
-        $args = func_get_args();
         return $this->doOperation(self::MULTIPLY, $args);
     }
 
-    public function divide()
+    public function divide(...$args)
     {
         $numberArgs = func_num_args();
         if ($numberArgs < 2) {
             return null;
         }
-        $args = func_get_args();
         return $this->doOperation(self::DIVIDE, $args);
     }
 }
