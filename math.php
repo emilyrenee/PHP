@@ -2,25 +2,61 @@
 
 class Math
 {
-    public function add($baz, $buzz)
+    public function add()
     {
-        return $baz + $buzz;
+        $numberArgs = func_num_args();
+        if ($numberArgs < 2) {
+            return null;
+        }
+        $args = func_get_args();
+
+        $result = array_reduce($args, function ($a, $b) {
+            return $a + $b;
+        });
+        return $result;
     }
 
-    public function subtract($baz, $buzz)
+    public function subtract()
     {
-        return $baz - $buzz;
+        $numberArgs = func_num_args();
+        if ($numberArgs < 2) {
+            return null;
+        }
+        $args = func_get_args();
+
+        $result = array_reduce($args, function ($a, $b) {
+            return $a - $b;
+        });
+        return $result;
     }
 
     // passing by reference
-    public function multiply(&$baz, &$buzz)
+    public function multiply()
     {
-        return $baz * $buzz;
+        $numberArgs = func_num_args();
+        if ($numberArgs < 2) {
+            return null;
+        }
+        $args = func_get_args();
+
+        $result = array_reduce($args, function ($a, $b) {
+            return $a * $b;
+        });
+        return $result;
     }
 
     // passing by reference
-    public function divide(&$baz, &$buzz)
+    public function divide()
     {
-        return $baz / $buzz;
+        $numberArgs = func_num_args();
+        if ($numberArgs < 2) {
+            return null;
+        }
+        $args = func_get_args();
+
+        $result = array_reduce($args, function ($a, $b) {
+            return $a / $b;
+        });
+        return $result;
     }
 }
