@@ -65,7 +65,14 @@ for ($iteration = 0; $iteration < count($numbers); $iteration++) {
 	handleNumber($number);
 }
 
-while ($iteration > count($numbers)) {
+$iteration = 0;
+while ($iteration < count($numbers)) {
 	handleNumber($numbers[$iteration]);
 	$iteration++;
 }
+
+// $iteration = 0;
+// do {
+// 	handleNumber($numbers[$iteration]);
+// 	$iteration++;
+// } while ($iteration < count($numbers));
