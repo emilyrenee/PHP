@@ -3,23 +3,10 @@ namespace Advanced;
 require("./Computer.php");
 
 class Workstation extends Computer {
-    protected $workstation = 'workstation' . PHP_EOL;
-
-    private function getWorkstationComputerName() {
-        return Computer::getComputerName();
-    }
-
-    public function getWorkstationComputer() {
-        return $this->getWorkstationComputerName();
-    }
-
-    public function getWorkstationName() {
-        print_r($this->workstation);
-    }
+    public $worker = 'Emily';
 
     public function stop() {
         parent::stop();
-        parent::sleep();
         print_r('work station stopping'. PHP_EOL);
     }
 
@@ -29,4 +16,11 @@ class Workstation extends Computer {
         print_r('work station starting'. PHP_EOL);
     }
 
+    public function getWorker() {
+        print_r($this->name . PHP_EOL);
+    }
+
+    public function setWorker($worker) {
+        $this->worker = $worker;
+    }
 }

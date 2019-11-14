@@ -3,17 +3,12 @@ namespace Advanced;
 
 require('./Mac.php');
 require('./PC.php');
+require('./Server.php');
 
 $computer = new Computer();
-$computerName = $computer->getComputerName();
-
 $workstation = new Workstation();
-$workstationComputerName = $workstation->getWorkstationComputer();
-$workstationName = $workstation->getWorkstationName();
-
-$computerName;
-$workstationComputerName;
-$workstationName;
+$server = new Server();
 
 $workstation->start();
 $workstation->stop();
+$server->authenticate('me');

@@ -1,6 +1,16 @@
 <?php
-require("./Computer.php");
+namespace Advanced;
+require_once("./Computer.php");
 
-class Server extends Computer {
-    //
+interface ServerInterface
+{
+    public function authenticate($name);
+}
+
+
+class Server extends Computer implements ServerInterface {
+    public function authenticate($name)
+    {
+        print_r($name);
+    }
 }
