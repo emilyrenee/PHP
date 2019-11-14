@@ -35,6 +35,10 @@ class Computer {
         $this->name = $name;
     }
 
+    public function getPassword() {
+        print_r($this->password . PHP_EOL);
+    }
+
     private function setPassword($password) {
         $this->password = $password;
     }

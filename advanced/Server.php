@@ -11,6 +11,6 @@ interface ServerInterface
 class Server extends Computer implements ServerInterface {
     public function authenticate($name)
     {
-        print_r($name);
+        print_r($name) . PHP_EOL;
     }
 }
